@@ -17,17 +17,15 @@ extension ViewController: ARSCNViewDelegate {
             return nil
         }
 
-        guard let imageName = anchor.referenceImage.name else {
-            print("Received reference image without a name.")
-            return nil
+        guard
+            let lastCharacter = anchor.referenceImage.name?.last,
+            let imageNumber = Int(String(lastCharacter))
+        else {
+            fatalError()
         }
 
-        print("Added anchor for image:", imageName)
-
-        guard let model = imageModelMap[imageName] else {
-            fatalError("No model corresponding to image: \(imageName)")
-        }
-
+        let model = gameSession.imageModelMap[imageNumber]
+        print("Added anchor for image: \(imageNumber); model: \(model)")
         return modelNodes[model]
     }
 

@@ -6,23 +6,13 @@ class ViewController: UIViewController {
 
     @IBOutlet var sceneView: ARSCNView!
 
-    let imageModelMap: [String: Model] = [
-        "ArtificialHive": .bread,
-        "FluffyTrefoil": .burger,
-        "MoebiusTriangle": .chinese,
-        "Orbital": .chocolate,
-        "RadialBalance": .croissant,
-        "ShurikenAperture": .donut,
-        "Staryu": .fries,
-        "Triorb": .pineapple,
-        "TripleBeak": .taco,
-        "ZigzagCage": .turkey,
-    ]
-
+    var gameSession: GameSession!
     var modelNodes: [Model: SCNNode]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        gameSession = GameSession(playerCount: 2)
+        gameSession = GameSession(gameCode: "BA", currentPlayerIndex: 1)
         modelNodes = Model.loadAll()
 
         sceneView.delegate = self

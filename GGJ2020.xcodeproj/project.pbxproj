@@ -16,6 +16,9 @@
 		49239D8A23DE93CB00B7F9ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49239D8823DE93CB00B7F9ED /* Main.storyboard */; };
 		49239D8C23DE93CC00B7F9ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49239D8B23DE93CC00B7F9ED /* Assets.xcassets */; };
 		49239D8F23DE93CC00B7F9ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49239D8D23DE93CC00B7F9ED /* LaunchScreen.storyboard */; };
+		492E740023E62BD900D8F463 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E73FF23E62BD900D8F463 /* GameSession.swift */; };
+		492E740223E62C0A00D8F463 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E740123E62C0A00D8F463 /* Player.swift */; };
+		492E740623E64E3000D8F463 /* GameCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E740523E64E3000D8F463 /* GameCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		49239D8B23DE93CC00B7F9ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49239D8E23DE93CC00B7F9ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49239D9023DE93CC00B7F9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		492E73FF23E62BD900D8F463 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		492E740123E62C0A00D8F463 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		492E740523E64E3000D8F463 /* GameCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,10 @@
 			children = (
 				490F91E123E5429100898D92 /* AppDelegate.swift */,
 				490F91DF23E5425100898D92 /* Constants.swift */,
+				492E740523E64E3000D8F463 /* GameCode.swift */,
+				492E73FF23E62BD900D8F463 /* GameSession.swift */,
 				490F91E523E544C900898D92 /* Model.swift */,
+				492E740123E62C0A00D8F463 /* Player.swift */,
 				49239D8623DE93CB00B7F9ED /* ViewController.swift */,
 				490F91DB23E51E8200898D92 /* ViewController+ARSCNViewDelegate.swift */,
 				49239D8423DE93CB00B7F9ED /* art.scnassets */,
@@ -152,6 +161,9 @@
 				490F91DC23E51E8200898D92 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				490F91E623E544C900898D92 /* Model.swift in Sources */,
 				49239D8723DE93CB00B7F9ED /* ViewController.swift in Sources */,
+				492E740623E64E3000D8F463 /* GameCode.swift in Sources */,
+				492E740223E62C0A00D8F463 /* Player.swift in Sources */,
+				492E740023E62BD900D8F463 /* GameSession.swift in Sources */,
 				490F91E023E5425100898D92 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,34 +5,34 @@
   },
   "resources" : [
     {
-      "filename" : "ArtificialHive.arreferenceimage"
+      "filename" : "image0.arreferenceimage"
     },
     {
-      "filename" : "FluffyTrefoil.arreferenceimage"
+      "filename" : "image1.arreferenceimage"
     },
     {
-      "filename" : "MoebiusTriangle.arreferenceimage"
+      "filename" : "image2.arreferenceimage"
     },
     {
-      "filename" : "Orbital.arreferenceimage"
+      "filename" : "image3.arreferenceimage"
     },
     {
-      "filename" : "RadialBalance.arreferenceimage"
+      "filename" : "image4.arreferenceimage"
     },
     {
-      "filename" : "ShurikenAperture.arreferenceimage"
+      "filename" : "image5.arreferenceimage"
     },
     {
-      "filename" : "Staryu.arreferenceimage"
+      "filename" : "image6.arreferenceimage"
     },
     {
-      "filename" : "Triorb.arreferenceimage"
+      "filename" : "image7.arreferenceimage"
     },
     {
-      "filename" : "TripleBeak.arreferenceimage"
+      "filename" : "image8.arreferenceimage"
     },
     {
-      "filename" : "ZigzagCage.arreferenceimage"
+      "filename" : "image9.arreferenceimage"
     }
   ]
 }
