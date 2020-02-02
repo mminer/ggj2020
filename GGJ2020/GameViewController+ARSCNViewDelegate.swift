@@ -1,6 +1,6 @@
 import ARKit
 
-extension ViewController: ARSCNViewDelegate {
+extension GameViewController: ARSCNViewDelegate {
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("Added node to scene.")

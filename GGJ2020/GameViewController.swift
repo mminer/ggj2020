@@ -2,8 +2,10 @@ import ARKit
 import SceneKit
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
 
+    @IBOutlet var gameCodeLabel: UILabel!
+    @IBOutlet var playerLabel: UILabel!
     @IBOutlet var sceneView: ARSCNView!
 
     var gameSession: GameSession!
@@ -11,9 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        gameSession = GameSession(playerCount: 2)
-        gameSession = GameSession(gameCode: "BA", currentPlayerIndex: 1)
         modelNodes = Model.loadAll()
+
+        gameCodeLabel.text = gameSession.gameCode
+        playerLabel.text = "Player \(gameSession.currentPlayerNumber)"
 
         sceneView.delegate = self
         sceneView.scene = SCNScene()
@@ -28,6 +31,12 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+
+    @IBAction func leaveGame() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()!
+        present(viewController, animated: true)
     }
 
     func resetTracking() {

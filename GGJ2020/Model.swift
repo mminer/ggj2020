@@ -1,7 +1,7 @@
 import SceneKit
 
 enum Model: String, CaseIterable {
-    
+
     case bread
     case burger
     case chinese

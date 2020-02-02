@@ -2,22 +2,31 @@ import GameplayKit
 
 struct GameSession {
 
-    let currentPlayer: Player
+    let currentPlayerNumber: Int
+    let gameCode: String
     let imageModelMap: [Model] // Index = image number
     let players: [Player]
 
-    init(gameCode: String, currentPlayerIndex: Int) {
+    var currentPlayer: Player {
+        return players[currentPlayerNumber - 1]
+    }
+
+    init(gameCode: String, currentPlayerNumber: Int) {
         let playerCount = GameCode.extractPlayerCount(gameCode)
         let seed = gameCode.data(using: .utf8)!
         let randomNumberGenerator = GKARC4RandomSource(seed: seed)
 
-        imageModelMap = randomNumberGenerator.arrayByShufflingObjects(in: Model.allCases) as! [Model]
-        players = (1...playerCount).map { _ in Player(randomNumberGenerator: randomNumberGenerator) }
-        currentPlayer = players[currentPlayerIndex]
+        self.currentPlayerNumber = currentPlayerNumber
+        self.gameCode = gameCode
+        self.imageModelMap = randomNumberGenerator.arrayByShufflingObjects(in: Model.allCases) as! [Model]
+
+        self.players = (1...playerCount).map { playerNumber in
+          Player(playerNumber: playerNumber, randomNumberGenerator)
+        }
     }
 
     init(playerCount: Int) {
         let gameCode = GameCode.generate(playerCount: playerCount)
-        self.init(gameCode: gameCode, currentPlayerIndex: 0)
+        self.init(gameCode: gameCode, currentPlayerNumber: 1)
     }
 }
